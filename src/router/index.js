@@ -1,19 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import ConnectWallet from "@/components/ConnectWallet.vue"
+import DeployToken from "@/components/DeployToken.vue"
+import TokenFunctions from "@/components/TokenFunctions.vue"
+import ConnectToken from "@/components/ConnectToken.vue"
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'connectWallet',
+    component: ConnectWallet
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/deploy',
+    name: 'DeployToken',
+    component: DeployToken
+  },
+  {
+    path: '/token-functions',
+    name: 'TokenFunctions',
+    component: TokenFunctions
+  },
+  {
+    path: '/connect-token',
+    name: 'ConnectToken',
+    component: ConnectToken
   }
 ]
 
